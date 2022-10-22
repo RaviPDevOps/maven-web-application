@@ -25,14 +25,13 @@ node {
    }
     }
 }
-}
-}
 catch (e) {
    SlackNotication(currentBuild.result)
    throw e
   } 
   finally {
     SlackNotication(currentBuild.result)
+  }
   }
 //slacknotification
 def SlackNotication(String buildStatus = 'STARTED') {
