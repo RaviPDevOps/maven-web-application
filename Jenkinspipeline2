@@ -5,8 +5,8 @@ node {
     }
     echo "build numer is: ${env.BUILD_NUMBER}"
     echo "jenkins home is: ${env.JENKINS_HOME}"
-    echo "node name is: ${env.NODE_NAME}"
-    
+    echo "node name is: $ {env.NODE_NAME}"
+    echo "build url is: $ {env.BUILD_URL}"
     stage ('CheckoutCode'){
         git branch: 'development', credentialsId: '95707a02-0174-493a-8cab-154f4011f9a3', url: 'https://github.com/RaviPDevOps/maven-web-application.git'
     }
