@@ -3,10 +3,10 @@ node {
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '9', daysToKeepStr: '', numToKeepStr: '9')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([githubPush()])])
     timestamps{
     }
+    echo "build url is: ${env.BUILD_URL}"
     echo "build numer is: ${env.BUILD_NUMBER}"
     echo "jenkins home is: ${env.JENKINS_HOME}"
-    echo "node name is: ${env.NODE_NAME}"
-    
+    echo "node name is: ${env.NODE_NAME}"   
     stage ('CheckoutCode'){
         git branch: 'development', credentialsId: '95707a02-0174-493a-8cab-154f4011f9a3', url: 'https://github.com/RaviPDevOps/maven-web-application.git'
     }
