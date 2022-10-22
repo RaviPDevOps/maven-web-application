@@ -12,7 +12,7 @@ node {
         git branch: 'development', credentialsId: '95707a02-0174-493a-8cab-154f4011f9a3', url: 'https://github.com/RaviPDevOps/maven-web-application.git'
     }
     stage ('MavenBuild'){
-        sh "${mavenHome}/bin/mvn clean package"
+        sh "${mavenHome}/bin/mvn clean packag"
     }
     stage ('ExecuteSonaQube'){
         sh "${mavenHome}/bin/mvn sonar:sonar"
