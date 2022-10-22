@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to RK Technologies - GitHub WebHook demo  .....</h1>
-<h1 align="center"> Welcome to RK Software Solutions.......we are creating scriptedway pipelines for jenkins</h1>
+<h1 align="center"> Welcome to RK Software Solutions...we are creating scriptedway pipelines for jenkins</h1>
 <hr>
 <div style="text-align: center;">
 	<span>
