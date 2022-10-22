@@ -1,8 +1,6 @@
 node {
     def mavenHome = tool name: "maven3.8.6"
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '9', daysToKeepStr: '', numToKeepStr: '9')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([githubPush()])])
-    timestamps{
-    }
     echo "build url is: ${env.BUILD_URL}"
     echo "build numer is: ${env.BUILD_NUMBER}"
     echo "jenkins home is: ${env.JENKINS_HOME}"
