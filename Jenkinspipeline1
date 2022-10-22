@@ -27,7 +27,7 @@ node {
     }
 }
 catch (e) {
-   SlackNotication(currentBuild.result)
+   currentBuild.result = "FAILED"
    throw e
   } 
   finally {
