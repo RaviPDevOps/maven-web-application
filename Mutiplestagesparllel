@@ -1,0 +1,26 @@
+pipeline{
+    agent any
+    tools{
+        maven "maven3.8.6"
+    }
+    stages {
+        stage ('checkoutcode') {
+            steps {
+                git branch: 'development', credentialsId: '95707a02-0174-493a-8cab-154f4011f9a3', url: 'https://github.com/RaviPDevOps/maven-web-application.git'
+            }
+        }
+    
+        stage ('Testand Build') {
+            steps {
+                parallel(
+                    Test: {
+                        sh "mvn test"
+                    },
+                    Build: {
+                        sh "mvn package"
+                    }
+                    )
+            }
+        }
+    }
+}
