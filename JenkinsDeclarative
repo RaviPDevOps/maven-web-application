@@ -49,9 +49,8 @@ post {
     SlackNotication(currentBuild.result)
   }
 }
-
-
 }
+
 //slacknotification
 def SlackNotication(String buildStatus = 'STARTED') {
   // build status of null means successful
